@@ -1,4 +1,4 @@
-AC_INIT([main], [1.0], [youremail@example.com])
+AC_INIT([main], [1.0], [annathorzevskaa7@gmail.com])
 AM_INIT_AUTOMAKE
 AC_PROG_CXX
 AC_CONFIG_FILES([Makefile])
