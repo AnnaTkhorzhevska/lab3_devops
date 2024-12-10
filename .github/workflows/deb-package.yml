@@ -1,0 +1,20 @@
+name: Create Debian Package
+
+on:
+  push:
+    branches:
+      - branchAutoPackage
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt-get install -y devscripts debhelper
+
+      - name: Build Debian package
+        run: debuild -us -uc

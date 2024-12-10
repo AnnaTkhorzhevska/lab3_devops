@@ -1,0 +1,11 @@
+Source: main
+Section: utils
+Priority: optional
+Maintainer: Anna <annathorzevskaa7@gmail.com>
+Build-Depends: debhelper (>= 9), g++
+Standards-Version: 3.9.6
+
+Package: main
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple C++ Hello World program
