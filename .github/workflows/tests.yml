@@ -1,0 +1,23 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches:
+      - branchAutoTest
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt-get install -y automake autoconf g++
+
+      - name: Generate build files
+        run: autoreconf --install && ./configure
+
+      - name: Build project and run tests
+        run: make && make check
